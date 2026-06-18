@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+/* ============================================================
+   HumanKumal.com — Design Tokens
+   Tailwind v4 theme config (no tailwind.config.js needed).
+   Tokens below generate utilities like bg-base, text-ink, etc.
+   ============================================================ */
+@theme {
+  /* Surfaces */
+  --color-base: #0a0e1a;
+  --color-elevated: #111726;
+  --color-elevated-2: #161d30;
+
+  /* Accents */
+  --color-amber: #f5a623;
+  --color-amber-bright: #ffb84d;
+  --color-teal: #2dd4bf;
+
+  /* Typography */
+  --color-ink: #f5f3ef; /* text-primary, soft white (never pure #fff) */
+  --color-muted: #8a92a6; /* secondary copy */
+
+  /* Fonts (wired from next/font in layout.tsx) */
+  --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+
+  /* Motion */
+  --ease-out-soft: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ============================================================
+   Base
+   ============================================================ */
+html {
+  scroll-behavior: smooth;
+  /* offset for fixed nav when jumping to anchors */
+  scroll-padding-top: 5rem;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--color-base);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background-color: var(--color-amber);
+  color: var(--color-base);
+}
+
+/* Headings default to the display serif */
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+
+/* ============================================================
+   Accessibility — visible focus + reduced motion
+   ============================================================ */
+:focus-visible {
+  outline: 2px solid var(--color-amber-bright);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100px;
+  z-index: 100;
+  background: var(--color-amber);
+  color: var(--color-base);
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: top 0.2s ease;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* ============================================================
+   Reveal-on-scroll enhancement (progressive, JS-driven).
+   Content is visible by default; the .reveal-active class only
+   adds the hidden->shown transition when JS marks it active.
+   ============================================================ */
+.reveal-active {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.7s var(--ease-out-soft),
+    transform 0.7s var(--ease-out-soft);
+  will-change: opacity, transform;
+}
+.reveal-active.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal-active {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ============================================================
+   Reusable visual utilities
+   ============================================================ */
+.text-gradient-warm {
+  background: linear-gradient(120deg, var(--color-amber-bright), var(--color-amber));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.glow-amber {
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--color-amber) 25%, transparent),
+    0 20px 60px -20px color-mix(in srgb, var(--color-amber) 30%, transparent);
+}
+
+.hairline {
+  border: 1px solid color-mix(in srgb, var(--color-muted) 18%, transparent);
+}
+
+/* Subtle film-grain overlay used by GrainOverlay component */
+.grain::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
