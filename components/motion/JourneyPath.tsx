@@ -52,7 +52,7 @@ export function JourneyPath() {
     >
       <div
         ref={fillRef}
-        className="absolute inset-0 bg-gradient-to-b from-amber via-amber/70 to-teal"
+        className="absolute inset-0 bg-gradient-to-b from-amber/60 via-amber/40 to-teal/60"
         style={{ transformOrigin: "top center" }}
       />
     </div>
