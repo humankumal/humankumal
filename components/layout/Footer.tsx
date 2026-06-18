@@ -13,19 +13,21 @@ export function Footer() {
         </div>
 
         <ul className="flex flex-wrap gap-x-6 gap-y-2">
-          {socials.map((s) => (
-            <li key={s.label}>
-              <a
-                href={s.href}
-                className="text-sm text-muted transition-colors hover:text-amber-bright"
-                {...(s.href.startsWith("http")
-                  ? { target: "_blank", rel: "noopener noreferrer" }
-                  : {})}
-              >
-                {s.label}
-              </a>
-            </li>
-          ))}
+          {socials
+            .filter((s) => s.href !== "#")
+            .map((s) => (
+              <li key={s.label}>
+                <a
+                  href={s.href}
+                  className="text-sm text-muted transition-colors hover:text-amber-bright"
+                  {...(s.href.startsWith("http")
+                    ? { target: "_blank", rel: "noopener noreferrer" }
+                    : {})}
+                >
+                  {s.label}
+                </a>
+              </li>
+            ))}
         </ul>
       </div>
       <div className="mx-auto max-w-6xl px-6 pb-8 sm:px-8">

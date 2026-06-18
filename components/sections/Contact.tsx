@@ -61,7 +61,7 @@ export function Contact() {
           <Reveal delay={240}>
             <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2">
               {socials
-                .filter((s) => s.label !== "Email")
+                .filter((s) => s.label !== "Email" && s.href !== "#")
                 .map((s) => (
                   <li key={s.label}>
                     <a
