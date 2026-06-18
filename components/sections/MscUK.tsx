@@ -22,11 +22,6 @@ export function MscUK() {
               <p className="mt-4 text-xs font-medium uppercase tracking-[0.2em] text-muted">
                 {msc.degree} · {msc.field} · {msc.place}
               </p>
-              {!msc.institutionKnown && (
-                <span className="mt-3 inline-flex items-center gap-1.5 rounded-full border border-[color-mix(in_srgb,var(--color-amber)_25%,transparent)] bg-[color-mix(in_srgb,var(--color-amber)_8%,transparent)] px-2.5 py-0.5 text-[10px] font-medium uppercase tracking-[0.18em] text-amber/70">
-                  Details to be confirmed
-                </span>
-              )}
             </Reveal>
           ) : null}
         </div>

@@ -3,14 +3,6 @@ import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/motion/Reveal";
 
-function PendingBadge() {
-  return (
-    <span className="inline-flex items-center gap-1.5 rounded-full border border-[color-mix(in_srgb,var(--color-amber)_25%,transparent)] bg-[color-mix(in_srgb,var(--color-amber)_8%,transparent)] px-2.5 py-0.5 text-[10px] font-medium uppercase tracking-[0.18em] text-amber/70">
-      Details to be confirmed
-    </span>
-  );
-}
-
 export function EducationArc() {
   const entries = education.filter((e) => e.place === "Nepal");
 
@@ -50,14 +42,12 @@ export function EducationArc() {
               </div>
 
               <div className="border-l border-[color-mix(in_srgb,var(--color-muted)_18%,transparent)] pl-6 sm:pl-8">
-                {entry.institutionKnown ? (
-                  <p className="text-sm text-muted">
+                {entry.institutionKnown && (
+                  <p className="mb-3 text-sm text-muted">
                     {entry.institution} · {entry.year}
                   </p>
-                ) : (
-                  <PendingBadge />
                 )}
-                <p className="mt-3 max-w-xl text-base leading-relaxed text-ink/90 sm:text-lg">
+                <p className="max-w-xl text-base leading-relaxed text-ink/90 sm:text-lg">
                   {entry.impact}
                 </p>
               </div>

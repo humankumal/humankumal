@@ -21,15 +21,8 @@ export function TheMove() {
       <div className="relative text-center">
         {/* Arrow row animated by ScrollAnimations — not Reveal — for staggered trajectory effect */}
         <div className="mx-auto mb-12 flex max-w-md items-center justify-center gap-4 text-sm font-medium uppercase tracking-[0.25em]">
-          <span
-            data-move-from
-            className="relative inline-flex flex-col items-center gap-1 text-amber"
-          >
-            <span>{theMove.fromLabel}</span>
-            {/* Geographic coordinate — desktop only, animates with parent */}
-            <span className="hidden font-mono text-[9px] font-normal tracking-[0.12em] text-muted/40 normal-case sm:block">
-              27°N · 84°E
-            </span>
+          <span data-move-from className="text-amber">
+            {theMove.fromLabel}
           </span>
 
           <span
@@ -42,15 +35,8 @@ export function TheMove() {
             <ArrowRight className="relative h-5 w-5 text-amber/65" />
           </span>
 
-          <span
-            data-move-to
-            className="relative inline-flex flex-col items-center gap-1 text-teal"
-          >
-            <span>{theMove.toLabel}</span>
-            {/* Geographic coordinate — desktop only */}
-            <span className="hidden font-mono text-[9px] font-normal tracking-[0.12em] text-muted/40 normal-case sm:block">
-              51°N · 0°W
-            </span>
+          <span data-move-to className="text-teal">
+            {theMove.toLabel}
           </span>
         </div>
 
