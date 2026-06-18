@@ -1,5 +1,6 @@
 import { ArrowUpRight, ImageIcon, Clock } from "lucide-react";
 import type { Project } from "@/content/projects";
+import { cn } from "@/lib/cn";
 import { Card } from "./Card";
 import { Tag } from "./Tag";
 
@@ -22,7 +23,14 @@ export function ProjectCard({ project }: ProjectCardProps) {
   const isLive = project.status === "live";
 
   const visual = (
-    <div className="relative aspect-[16/10] w-full overflow-hidden border-b border-[color-mix(in_srgb,var(--color-muted)_12%,transparent)] bg-elevated-2">
+    <div
+      className={cn(
+        "relative w-full overflow-hidden border-b border-[color-mix(in_srgb,var(--color-muted)_12%,transparent)] bg-elevated-2",
+        // No-image cards use a compact height on mobile to avoid large empty blocks.
+        // Cards with real screenshots keep the full 16:10 ratio at all sizes.
+        project.image ? "aspect-[16/10]" : "h-28 sm:h-auto sm:aspect-[16/10]",
+      )}
+    >
       {project.image ? (
         // eslint-disable-next-line @next/next/no-img-element
         <img

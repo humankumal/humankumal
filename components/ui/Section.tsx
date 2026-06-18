@@ -27,7 +27,7 @@ export function Section({
       aria-label={label}
       className={cn(
         "relative w-full scroll-mt-20",
-        spacing === "lg" ? "py-20 sm:py-36 lg:py-44" : "py-14 sm:py-28 lg:py-32",
+        spacing === "lg" ? "py-16 sm:py-36 lg:py-44" : "py-14 sm:py-28 lg:py-32",
         className,
       )}
     >

@@ -83,16 +83,16 @@ export function ScrollAnimations() {
 
       cleanups.push(() => tl.scrollTrigger?.kill());
     } else {
-      // Desktop: pin section while trajectory scrubs in over 40% vh of extra scroll
-      gsap.set(fromEl, { opacity: 0, x: -20 });
-      gsap.set(arrowEl, { opacity: 0, scale: 0.5 });
-      gsap.set(toEl, { opacity: 0, x: 20 });
+      // Desktop: pin section while trajectory scrubs in over 55% vh of extra scroll
+      gsap.set(fromEl, { opacity: 0, x: -28 });
+      gsap.set(arrowEl, { opacity: 0, scale: 0.35 });
+      gsap.set(toEl, { opacity: 0, x: 28 });
 
       // Pin must be created first so GSAP can compensate downstream triggers
       const pin = ScrollTrigger.create({
         trigger: sectionEl,
         start: "top top",
-        end: "+=40%",
+        end: "+=55%",
         pin: true,
         pinSpacing: true,
         anticipatePin: 1,
@@ -102,13 +102,13 @@ export function ScrollAnimations() {
         scrollTrigger: {
           trigger: sectionEl,
           start: "top top",
-          end: "+=40%",
-          scrub: 0.6,
+          end: "+=55%",
+          scrub: 0.5,
         },
       });
-      tl.to(fromEl, { opacity: 1, x: 0, duration: 0.35 })
-        .to(arrowEl, { opacity: 1, scale: 1, duration: 0.3 }, "-=0.15")
-        .to(toEl, { opacity: 1, x: 0, duration: 0.35 }, "-=0.15");
+      tl.to(fromEl, { opacity: 1, x: 0, duration: 0.38 })
+        .to(arrowEl, { opacity: 1, scale: 1, duration: 0.28 }, "-=0.16")
+        .to(toEl, { opacity: 1, x: 0, duration: 0.38 }, "-=0.16");
 
       cleanups.push(() => {
         pin.kill();
