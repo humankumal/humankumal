@@ -12,14 +12,37 @@ This is **Version 1**: the foundation + full static narrative. Advanced motion (
 - **GSAP + ScrollTrigger** — installed and registered (`lib/gsap.ts`), reserved for the Phase 3 motion layer
 - **lucide-react** — icons
 
-## Getting started
+## Local development
 
 ```bash
 npm install
 npm run dev     # http://localhost:3000
-npm run lint
-npm run build
+npm run lint    # eslint
+npm run build   # production build (fully static)
 ```
+
+## Deploying on Vercel
+
+The project is a standard Next.js App Router app with **no backend, database, or
+environment variables** — it deploys to Vercel with zero configuration.
+
+1. Push the branch to GitHub (already done for the feature branch).
+2. In Vercel: **Add New → Project → Import** the `humankumal/humankumal` repo.
+3. Vercel auto-detects Next.js. Confirm the defaults:
+
+   | Setting          | Value                          |
+   | ---------------- | ------------------------------ |
+   | Framework Preset | Next.js                        |
+   | Build Command    | `next build` (default)         |
+   | Install Command  | `npm install` (default)        |
+   | Output Directory | `.next` (default — leave blank)|
+   | Environment vars | none                           |
+
+4. Choose the branch to deploy (see below) and deploy.
+
+Open Graph / Twitter share images are generated automatically at build time
+from `app/opengraph-image.tsx` (no static asset needed). Once a custom domain
+is connected, set it to `https://humankumal.com` so `metadataBase` matches.
 
 ## Structure
 
@@ -50,19 +73,26 @@ public/images/        # project screenshots / imagery (to be added)
 
 > Note: use `text-[var(--color-base)]` for navy-on-amber text — `text-base` is a built-in Tailwind font-size utility.
 
-## Placeholders to replace (V1 -> V2)
+## Placeholders to replace before public launch
 
 Search the `content/` folder for `TODO` and "to be added":
 
 - **Education** (`content/journey.ts`) — institution names + years for BBA, MBA, MSc
-- **LinkedIn URL** (`content/site.ts`) — `socials[0].href`
-- **UKDIGIHUB URL** (`content/site.ts`, `content/interests.ts`) — confirm live domain
+- **LinkedIn URL** (`content/site.ts`) — `socials[0].href` (currently `#`)
 - **UKDIGIHUB stats** (`content/interests.ts`) — real figures if available
-- **Projects** (`content/projects.ts`) — real titles, descriptions, links, and screenshots in `/public/images`
-- **Imagery** — Nepal origin visual + hero ambient art
-- **Open Graph image** — add an OG/social share image
+- **Projects** (`content/projects.ts`) — real titles, descriptions, links, and screenshots in `/public/images` (cards currently link to `#`)
+- **Imagery** — Nepal origin visual (currently an SVG placeholder)
 
-Contact email is set to `human@ukdigihub.co.uk`.
+Confirmed / done:
+
+- Contact email — `human@ukdigihub.co.uk` (opens via `mailto:`, no backend)
+- UKDIGIHUB URL — `https://ukdigihub.co.uk`
+- Site domain — `https://humankumal.com`
+- Open Graph / Twitter image — auto-generated, on-brand placeholder
+
+> The contact form has **no backend** by design — it composes a pre-filled
+> email via the visitor's mail client. A real form handler can be added later
+> without changing the markup.
 
 ## Accessibility
 
