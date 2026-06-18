@@ -8,9 +8,10 @@ export interface EducationEntry {
   degree: string;
   field: string;
   place: string;
-  /** Placeholder until confirmed. */
   year: string;
   institution: string;
+  /** false = institution/year are placeholders; render a "details coming" badge */
+  institutionKnown: boolean;
   impact: string;
 }
 
@@ -30,8 +31,9 @@ export const education: EducationEntry[] = [
     degree: "BBA",
     field: "Finance & Accountancy",
     place: "Nepal",
-    year: "Year to be added",
-    institution: "Institution to be added",
+    year: "Year to be confirmed",
+    institution: "Institution to be confirmed",
+    institutionKnown: false,
     impact:
       "The foundation. Learning how businesses actually make and lose money taught me to read an organisation as a system of numbers, incentives, and decisions.",
   },
@@ -40,8 +42,9 @@ export const education: EducationEntry[] = [
     degree: "MBA",
     field: "Finance",
     place: "Nepal",
-    year: "Year to be added",
-    institution: "Institution to be added",
+    year: "Year to be confirmed",
+    institution: "Institution to be confirmed",
+    institutionKnown: false,
     impact:
       "Strategy on top of fundamentals. The MBA sharpened how I think about growth, risk, and the long game — the lens I now bring to every client's business.",
   },
@@ -50,8 +53,9 @@ export const education: EducationEntry[] = [
     degree: "MSc",
     field: "Digital Marketing",
     place: "United Kingdom",
-    year: "Year to be added",
-    institution: "Institution to be added",
+    year: "Year to be confirmed",
+    institution: "Institution to be confirmed",
+    institutionKnown: false,
     impact:
       "Where financial strategy met modern digital systems. This is the bridge between the analytical mind I built in Nepal and the digital craft I practise in the UK.",
   },

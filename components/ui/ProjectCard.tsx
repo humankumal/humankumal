@@ -25,10 +25,10 @@ export function ProjectCard({ project }: ProjectCardProps) {
               className="h-full w-full object-cover"
             />
           ) : (
-            <div className="flex h-full w-full flex-col items-center justify-center gap-2 bg-[radial-gradient(circle_at_30%_20%,color-mix(in_srgb,var(--color-amber)_12%,transparent),transparent_60%),radial-gradient(circle_at_80%_80%,color-mix(in_srgb,var(--color-teal)_12%,transparent),transparent_55%)] text-muted">
-              <ImageIcon className="h-7 w-7" aria-hidden />
-              <span className="text-xs uppercase tracking-[0.2em]">
-                Screenshot coming soon
+            <div className="flex h-full w-full flex-col items-center justify-center gap-2 bg-[radial-gradient(circle_at_30%_20%,color-mix(in_srgb,var(--color-amber)_10%,transparent),transparent_60%),radial-gradient(circle_at_80%_80%,color-mix(in_srgb,var(--color-teal)_10%,transparent),transparent_55%)] text-ink/40">
+              <ImageIcon className="h-6 w-6" aria-hidden />
+              <span className="text-[10px] uppercase tracking-[0.22em]">
+                Preview coming soon
               </span>
             </div>
           )}

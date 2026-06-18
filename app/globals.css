@@ -18,7 +18,7 @@
 
   /* Typography */
   --color-ink: #f5f3ef; /* text-primary, soft white (never pure #fff) */
-  --color-muted: #8a92a6; /* secondary copy */
+  --color-muted: #9ba4b8; /* secondary copy — bumped for mobile readability */
 
   /* Fonts (wired from next/font in layout.tsx) */
   --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;

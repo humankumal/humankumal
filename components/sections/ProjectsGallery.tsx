@@ -21,9 +21,9 @@ export function ProjectsGallery() {
         </Reveal>
       </div>
 
-      <div className="mt-14 grid gap-6 sm:grid-cols-2">
+      <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, i) => (
-          <Reveal key={project.id} delay={i * 70}>
+          <Reveal key={project.id} delay={Math.min(i * 50, 300)}>
             <ProjectCard project={project} />
           </Reveal>
         ))}

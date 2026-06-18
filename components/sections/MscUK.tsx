@@ -19,11 +19,14 @@ export function MscUK() {
           </Reveal>
           {msc ? (
             <Reveal delay={80}>
-              <p className="mt-6 text-sm uppercase tracking-[0.2em] text-muted">
-                {msc.degree} {msc.field} · {msc.place} · {msc.year}
-                <br />
-                {msc.institution}
+              <p className="mt-4 text-xs font-medium uppercase tracking-[0.2em] text-muted">
+                {msc.degree} · {msc.field} · {msc.place}
               </p>
+              {!msc.institutionKnown && (
+                <span className="mt-3 inline-flex items-center gap-1.5 rounded-full border border-[color-mix(in_srgb,var(--color-amber)_25%,transparent)] bg-[color-mix(in_srgb,var(--color-amber)_8%,transparent)] px-2.5 py-0.5 text-[10px] font-medium uppercase tracking-[0.18em] text-amber/70">
+                  Details to be confirmed
+                </span>
+              )}
             </Reveal>
           ) : null}
         </div>
@@ -32,7 +35,7 @@ export function MscUK() {
           <div className="space-y-5">
             {mscChapter.body.map((p, i) => (
               <Reveal key={i} delay={i * 80}>
-                <p className="text-lg leading-relaxed text-muted">{p}</p>
+                <p className="text-base leading-relaxed text-muted sm:text-lg">{p}</p>
               </Reveal>
             ))}
           </div>

@@ -16,9 +16,9 @@ export function Hero() {
         className="-right-40 bottom-0 h-[30rem] w-[30rem]"
       />
 
-      <div className="mx-auto w-full max-w-6xl px-6 sm:px-8">
+      <div className="mx-auto w-full max-w-6xl px-6 pb-12 pt-28 sm:px-8 sm:py-0">
         <Reveal>
-          <p className="mb-6 text-sm font-medium uppercase tracking-[0.3em] text-amber">
+          <p className="mb-5 text-xs font-medium uppercase tracking-[0.3em] text-amber sm:mb-6 sm:text-sm">
             {siteConfig.tagline}
           </p>
         </Reveal>
@@ -29,25 +29,34 @@ export function Hero() {
           </h1>
         </Reveal>
 
+        {/* Credential line — concise on all viewports */}
         <Reveal delay={160}>
-          <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted sm:text-xl">
-            {siteConfig.description}
+          <p className="mt-6 max-w-2xl text-base font-medium leading-relaxed text-ink/90 sm:text-lg">
+            {siteConfig.heroCredential}
           </p>
         </Reveal>
 
-        <Reveal delay={240}>
-          <p className="mt-6 font-display text-xl italic text-teal sm:text-2xl">
+        {/* Value line — what you actually do */}
+        <Reveal delay={220}>
+          <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted sm:text-base">
+            {siteConfig.heroValue}
+          </p>
+        </Reveal>
+
+        {/* Anchor line — shown at sm and above only to keep mobile uncluttered */}
+        <Reveal delay={280}>
+          <p className="mt-5 font-display text-base italic text-teal sm:mt-6 sm:text-xl">
             {siteConfig.anchorLine}
           </p>
         </Reveal>
 
-        <Reveal delay={320}>
+        <Reveal delay={340}>
           <a
             href="#origins"
-            className="group mt-12 inline-flex items-center gap-3 text-sm font-medium uppercase tracking-[0.2em] text-ink transition-colors hover:text-amber-bright"
+            className="group mt-10 inline-flex items-center gap-3 text-xs font-medium uppercase tracking-[0.2em] text-ink transition-colors hover:text-amber-bright sm:mt-12 sm:text-sm"
           >
-            <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[color-mix(in_srgb,var(--color-amber)_45%,transparent)] transition-transform duration-300 group-hover:translate-y-1">
-              <ArrowDown className="h-4 w-4" aria-hidden />
+            <span className="flex h-9 w-9 items-center justify-center rounded-full border border-[color-mix(in_srgb,var(--color-amber)_45%,transparent)] transition-transform duration-300 group-hover:translate-y-1 sm:h-10 sm:w-10">
+              <ArrowDown className="h-3.5 w-3.5 sm:h-4 sm:w-4" aria-hidden />
             </span>
             Read my story
           </a>
