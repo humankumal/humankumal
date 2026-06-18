@@ -3,6 +3,8 @@ import { ScrollProgress } from "@/components/layout/ScrollProgress";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { GrainOverlay } from "@/components/visual/GrainOverlay";
+import { JourneyPath } from "@/components/motion/JourneyPath";
+import { ScrollAnimations } from "@/components/motion/ScrollAnimations";
 
 import { Hero } from "@/components/sections/Hero";
 import { OriginNepal } from "@/components/sections/OriginNepal";
@@ -27,8 +29,10 @@ export default function Home() {
       <ScrollProgress />
       <GrainOverlay />
       <Navbar />
+      <JourneyPath />
 
       <main id="main" className="relative z-10">
+        <ScrollAnimations />
         {/* 01 — Hero / Identity */}
         <Hero />
         {/* 02 — Origins: Nepal */}

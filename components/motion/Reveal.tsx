@@ -2,26 +2,16 @@
 
 import { useEffect, useRef } from "react";
 import { cn } from "@/lib/cn";
+import { gsap, ScrollTrigger } from "@/lib/gsap";
 
 interface RevealProps {
   children: React.ReactNode;
   className?: string;
-  /** Stagger start delay in ms. */
+  /** Stagger start delay in ms (converted to GSAP seconds internally). */
   delay?: number;
   as?: "div" | "li" | "section";
 }
 
-/**
- * Progressive scroll-reveal. The element ships with the `reveal-active`
- * class (hidden by default in CSS); an IntersectionObserver adds `is-visible`
- * to fade it up when it enters the viewport.
- *
- * Accessibility / robustness:
- *  - prefers-reduced-motion is handled in globals.css (always visible).
- *  - no-JS users see content via the <noscript> style in layout.tsx.
- *  - This is a lightweight CSS transition, NOT GSAP. The richer scroll
- *    scenes come in the Phase 3 motion layer.
- */
 export function Reveal({
   children,
   className,
@@ -37,33 +27,60 @@ export function Reveal({
     const prefersReduced = window.matchMedia(
       "(prefers-reduced-motion: reduce)",
     ).matches;
-    if (prefersReduced || typeof IntersectionObserver === "undefined") {
-      el.classList.add("is-visible");
+
+    if (prefersReduced) {
+      el.classList.remove("reveal-active");
+      gsap.set(el, { opacity: 1, y: 0, scale: 1 });
       return;
     }
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting) {
-            el.classList.add("is-visible");
-            observer.unobserve(entry.target);
-          }
-        }
+    // Disable CSS transition so GSAP owns the animation entirely
+    el.style.transition = "none";
+
+    const isMobile = window.innerWidth < 768;
+
+    const tween = gsap.fromTo(
+      el,
+      {
+        opacity: 0,
+        y: isMobile ? 12 : 22,
+        ...(isMobile ? {} : { scale: 0.97 }),
       },
-      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" },
+      {
+        opacity: 1,
+        y: 0,
+        ...(isMobile ? {} : { scale: 1 }),
+        duration: isMobile ? 0.5 : 0.72,
+        ease: "power2.out",
+        delay: delay / 1000,
+        scrollTrigger: {
+          trigger: el,
+          start: "top 90%",
+          once: true,
+        },
+        onComplete: () => {
+          el.classList.remove("reveal-active");
+          gsap.set(el, { clearProps: "all" });
+        },
+      },
     );
 
-    observer.observe(el);
-    return () => observer.disconnect();
+    return () => {
+      tween.scrollTrigger?.kill();
+      tween.kill();
+    };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  // Note: delay is intentionally excluded from deps — it's read once on mount.
+  // Changing delay mid-lifecycle is not supported and not needed here.
+  void ScrollTrigger; // imported for side-effect registration
 
   const Tag = as;
   return (
     <Tag
       ref={ref as React.Ref<never>}
       className={cn("reveal-active", className)}
-      style={delay ? { transitionDelay: `${delay}ms` } : undefined}
     >
       {children}
     </Tag>

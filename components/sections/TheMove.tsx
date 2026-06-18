@@ -19,13 +19,14 @@ export function TheMove() {
       />
 
       <div className="relative text-center">
-        <Reveal>
-          <div className="mx-auto mb-10 flex max-w-md items-center justify-center gap-4 text-sm font-medium uppercase tracking-[0.25em]">
-            <span className="text-amber">{theMove.fromLabel}</span>
-            <ArrowRight className="h-5 w-5 text-muted" aria-hidden />
-            <span className="text-teal">{theMove.toLabel}</span>
-          </div>
-        </Reveal>
+        {/* Arrow row animated by ScrollAnimations — not Reveal — for staggered trajectory effect */}
+        <div className="mx-auto mb-10 flex max-w-md items-center justify-center gap-4 text-sm font-medium uppercase tracking-[0.25em]">
+          <span data-move-from className="text-amber">{theMove.fromLabel}</span>
+          <span data-move-arrow aria-hidden>
+            <ArrowRight className="h-5 w-5 text-muted" />
+          </span>
+          <span data-move-to className="text-teal">{theMove.toLabel}</span>
+        </div>
 
         <Reveal delay={80}>
           <SectionHeading

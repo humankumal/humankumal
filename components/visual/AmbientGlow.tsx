@@ -16,6 +16,7 @@ export function AmbientGlow({ className, tone = "amber" }: AmbientGlowProps) {
   return (
     <div
       aria-hidden
+      data-glow={tone}
       className={cn("pointer-events-none absolute -z-0 blur-3xl", className)}
       style={{
         background: `radial-gradient(circle, color-mix(in srgb, ${color} 22%, transparent), transparent 70%)`,
