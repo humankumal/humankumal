@@ -22,9 +22,9 @@ export const siteConfig = {
   // Used by metadataBase + Open Graph.
   url: "https://humankumal.com",
   description:
-    "MBA & BBA graduate from Nepal, MSc Digital Marketing graduate in the UK, and founder of UKDIGIHUB — building digital marketing systems, web apps, and automation for small businesses.",
+    "MBA and BBA graduate from Nepal, MSc Digital Marketing graduate in the UK, founder of UKDIGIHUB, and business systems builder — creating digital marketing systems, web apps, and automation solutions for small businesses.",
   tagline: "Founder · Systems Builder · Digital Strategist",
-  anchorLine: "Nepal → UK → building the future of small business",
+  anchorLine: "From Nepal to the UK — building the systems small businesses grow on.",
   email: "human@ukdigihub.co.uk",
 } as const;
 
@@ -39,9 +39,9 @@ export const navItems: NavItem[] = [
 export const socials: SocialLink[] = [
   {
     label: "LinkedIn",
-    // TODO: replace with real LinkedIn profile URL
-    href: "#linkedin-url-to-be-added",
-    handle: "LinkedIn profile — to be added",
+    // TODO: replace "#" with the real LinkedIn profile URL.
+    href: "#",
+    handle: "LinkedIn (link coming soon)",
   },
   {
     label: "UKDIGIHUB",

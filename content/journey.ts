@@ -17,10 +17,10 @@ export interface EducationEntry {
 export const origin = {
   eyebrow: "Origins",
   yearStamp: "Nepal",
-  heading: "Born in Nepal. Built with intention.",
+  heading: "It started in Nepal.",
   body: [
-    "Every system I build today traces back to the same place — a country that taught me discipline, patience, and the quiet value of doing things properly.",
-    "Nepal is where my work ethic was shaped: long study, real responsibility, and an early understanding that ambition only matters when it is paired with follow-through.",
+    "I grew up in Nepal, where I learned early that nothing worth having comes without patience and discipline. That mindset shaped everything that followed.",
+    "Long before I built websites or systems, I was learning how to study hard, take responsibility, and finish what I started. The work ethic I carry into every project today was formed here — not in a classroom, but in the habits of growing up in Nepal.",
   ],
 } as const;
 
@@ -61,10 +61,10 @@ export const theMove = {
   eyebrow: "The Move",
   fromLabel: "Nepal",
   toLabel: "United Kingdom",
-  heading: "A decision that changed everything.",
+  heading: "Then I moved to the UK.",
   body: [
-    "Leaving home is never just a flight. It is a bet on yourself — that the discipline you built in one place will compound in another.",
-    "The move to the UK reframed everything I knew about business and put it against a new market, a new pace, and a new standard. It is the hinge my whole story turns on.",
+    "Leaving home was never just booking a flight. It was a bet on myself — that the discipline I built in Nepal would carry, and compound, somewhere new.",
+    "The UK tested everything I thought I knew about business against a different market, a faster pace, and a higher bar. It is the decision my whole story turns on, and the reason UKDIGIHUB exists today.",
   ],
 } as const;
 

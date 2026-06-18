@@ -6,8 +6,8 @@ export const ukdigihub = {
   eyebrow: "UKDIGIHUB",
   heading: "Why I built UKDIGIHUB.",
   body: [
-    "Small businesses are the backbone of every economy, yet most are sold expensive tools and empty promises instead of systems that actually work.",
-    "UKDIGIHUB exists to close that gap — to give small businesses the same calibre of digital marketing systems, web apps, and automation that larger companies take for granted, without the agency bloat.",
+    "I kept meeting small business owners who had been sold expensive tools and big promises, but never a system that actually worked. They didn't need more software — they needed someone to make it all work together.",
+    "So I started UKDIGIHUB to close that gap: to give small businesses the same calibre of digital marketing systems, web apps, and automation that larger companies take for granted — without the agency overhead or the jargon.",
   ],
   // TODO: replace with real figures once confirmed.
   stats: [

@@ -41,8 +41,10 @@ export function Contact() {
           </Reveal>
           <Reveal delay={80}>
             <p className="mt-6 max-w-md text-lg leading-relaxed text-muted">
-              Working with small businesses ready to build systems that
-              actually move the needle. If that sounds like you, get in touch.
+              I work with a small number of businesses ready to build systems
+              that actually move the needle — websites, SEO, automation, or the
+              whole picture. If that sounds like you, I&apos;d love to hear
+              from you.
             </p>
           </Reveal>
 
