@@ -22,7 +22,7 @@ export const siteConfig = {
   // Used by metadataBase + Open Graph.
   url: "https://humankumal.com",
   description:
-    "MBA and BBA graduate from Nepal, MSc Digital Marketing graduate in the UK, founder of UKDIGIHUB, and business systems builder — creating digital marketing systems, web apps, and automation solutions for small businesses.",
+    "MBA and BBA graduate from Nepal, MSc Digital Marketing graduate in the UK, founder of UKDIGIHUB, and business systems builder who creates digital marketing systems, web apps, and automation solutions for small businesses.",
   tagline: "Founder · Systems Builder · Digital Strategist",
   // Short hero credentials — shown as the first body line in the hero.
   heroCredential:
@@ -30,7 +30,7 @@ export const siteConfig = {
   // Short value proposition — shown as the second body line in the hero.
   heroValue:
     "I build websites, SEO systems, automation workflows, and AI-assisted tools for small businesses.",
-  anchorLine: "From Nepal to the UK — building the systems small businesses grow on.",
+  anchorLine: "From Nepal to the UK, building the systems small businesses grow on.",
   email: "human@ukdigihub.co.uk",
 } as const;
 

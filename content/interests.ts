@@ -6,8 +6,8 @@ export const ukdigihub = {
   eyebrow: "UKDIGIHUB",
   heading: "Why I built UKDIGIHUB.",
   body: [
-    "I kept meeting small business owners who had been sold expensive tools and big promises, but never a system that actually worked. They didn't need more software — they needed someone to make it all work together.",
-    "So I started UKDIGIHUB to close that gap: to give small businesses the same calibre of digital marketing systems, web apps, and automation that larger companies take for granted — without the agency overhead or the jargon.",
+    "I kept meeting small business owners who had been sold expensive tools and big promises, but never a system that actually worked. They didn't need more software. They needed someone to make it all work together.",
+    "So I started UKDIGIHUB to close that gap: to give small businesses the same calibre of digital marketing systems, web apps, and automation that larger companies take for granted, without the agency overhead or the jargon.",
   ],
   // TODO: replace with real figures once confirmed.
   stats: [
@@ -23,7 +23,7 @@ export const philosophy = {
   eyebrow: "Mindset & Vision",
   heading: "How I see the work.",
   body: [
-    "I believe the best business outcomes come from clear systems, not constant hustle. Strategy first, then craft, then automation — so the work compounds instead of resetting every month.",
+    "I believe the best business outcomes come from clear systems, not constant hustle. Strategy first, then craft, then automation, so the work compounds instead of resetting every month.",
     "My curiosity runs wider than marketing. Psychology, ancient wisdom, storytelling, and health all feed into how I think about building things that last and serving people honestly.",
   ],
 } as const;
@@ -69,6 +69,6 @@ export const futureGoals: FutureGoal[] = [
     id: "goal-story",
     title: "Share the journey",
     description:
-      "Document the road from Nepal to the UK — the lessons, the systems, the mindset — to help others take their own leap with more clarity.",
+      "Document the road from Nepal to the UK, sharing the lessons, systems, and mindset that help others take their own leap with more clarity.",
   },
 ];

@@ -41,7 +41,7 @@ export const projects: Project[] = [
     id: "ukdigihub",
     title: "UKDIGIHUB",
     description:
-      "The agency behind everything. UKDIGIHUB helps small businesses in the UK build the digital marketing systems, websites, and automation they need to grow — without the agency overhead.",
+      "The agency behind everything. UKDIGIHUB helps small businesses in the UK build the digital marketing systems, websites, and automation they need to grow, without the agency overhead.",
     disciplines: ["Web App", "Strategy"],
     tech: ["Next.js", "SEO", "Automation", "Strategy"],
     image: "",
@@ -52,7 +52,7 @@ export const projects: Project[] = [
     id: "fishos",
     title: "FishOS",
     description:
-      "A demo business management system designed for a seafood supplier — exploring how a purpose-built dashboard could handle orders, inventory, and customer records in one place.",
+      "A demo business management system for a seafood supplier. It explores how a purpose-built dashboard could handle orders, inventory, and customer records in one place.",
     disciplines: ["Business System", "Web App"],
     tech: ["Business System", "Dashboard", "Web App"],
     image: "",
@@ -63,7 +63,7 @@ export const projects: Project[] = [
     id: "pharmacyos",
     title: "PharmacyOS",
     description:
-      "A concept operations platform for independent pharmacies — demonstrating how prescription tracking, customer records, and daily admin workflows could be unified into a single system.",
+      "A concept operations platform for independent pharmacies. It shows how prescription tracking, customer records, and daily admin workflows could be unified into a single system.",
     disciplines: ["Business System", "Web App"],
     tech: ["Business System", "Automation", "Web App"],
     image: "",
@@ -74,7 +74,7 @@ export const projects: Project[] = [
     id: "laundryo",
     title: "LaundryOS",
     description:
-      "A demo platform for laundry and dry-cleaning businesses — a portfolio build exploring how booking, collection, and delivery tracking could work end-to-end in a clean interface.",
+      "A demo platform for laundry and dry-cleaning businesses. This portfolio build explores how booking, collection, and delivery tracking could work end-to-end in a clean interface.",
     disciplines: ["Business System", "Automation"],
     tech: ["Business System", "Automation", "Web App"],
     image: "",
@@ -85,7 +85,7 @@ export const projects: Project[] = [
     id: "dentalos",
     title: "DentalOS",
     description:
-      "A concept practice management system for independent dental clinics — exploring appointment booking, patient record management, and automated appointment reminders.",
+      "A concept practice management system for independent dental clinics, covering appointment booking, patient record management, and automated reminders.",
     disciplines: ["Business System", "Automation"],
     tech: ["Business System", "Automation", "Web App"],
     image: "",
@@ -96,7 +96,7 @@ export const projects: Project[] = [
     id: "propertyos",
     title: "PropertyOS",
     description:
-      "A demo property management platform — a portfolio build showing how listings, tenant communications, maintenance tracking, and rent workflows could be managed in one system.",
+      "A demo property management platform. This portfolio build shows how listings, tenant communications, maintenance tracking, and rent workflows could live in one system.",
     disciplines: ["Business System", "Web App"],
     tech: ["Business System", "Web App", "Automation"],
     image: "",
@@ -107,7 +107,7 @@ export const projects: Project[] = [
     id: "hotelos",
     title: "HotelOS",
     description:
-      "A concept operations system for small independent hotels — exploring how room availability, bookings, guest management, and staff coordination could be handled in one dashboard.",
+      "A concept operations system for small independent hotels. It explores how room availability, bookings, guest management, and staff coordination could be handled in one dashboard.",
     disciplines: ["Business System", "Web App"],
     tech: ["Business System", "Dashboard", "Web App"],
     image: "",
@@ -118,7 +118,7 @@ export const projects: Project[] = [
     id: "luxefloor",
     title: "LuxeFloor Carpets",
     description:
-      "A portfolio website and local SEO build for a flooring and carpets specialist — designed to demonstrate how a well-structured site and search system can drive local enquiries.",
+      "A portfolio website and local SEO build for a flooring and carpets specialist, designed to show how a well-structured site and search system can drive local enquiries.",
     disciplines: ["Web App", "SEO"],
     tech: ["Next.js", "SEO", "Conversion"],
     image: "",
@@ -129,7 +129,7 @@ export const projects: Project[] = [
     id: "lanternfall",
     title: "Lanternfall",
     description:
-      "A personal portfolio build — exploring what a modern, story-driven web product can look and feel like when design, narrative, and interaction are considered from the start.",
+      "A personal portfolio build that explores what a modern, story-driven web product can look and feel like when design, narrative, and interaction are considered from the start.",
     disciplines: ["Web App", "Strategy"],
     tech: ["Next.js", "Design", "Web App"],
     image: "",
@@ -140,7 +140,7 @@ export const projects: Project[] = [
     id: "n8n-automation",
     title: "n8n Automation Systems",
     description:
-      "A collection of automation workflows built with n8n — demonstrating how CRMs, email platforms, lead forms, and APIs can be connected to eliminate manual work for small businesses.",
+      "A collection of automation workflows built with n8n. They show how CRMs, email platforms, lead forms, and APIs can be connected to eliminate manual work for small businesses.",
     disciplines: ["Automation"],
     tech: ["n8n", "Automation", "Integrations"],
     image: "",

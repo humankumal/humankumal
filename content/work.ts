@@ -14,7 +14,7 @@ export interface WorkCategory {
 export const workIntro = {
   eyebrow: "Real Work",
   heading: "Not a CV. A record of what I build.",
-  body: "I work with small businesses to design the systems that let them compete above their size — from the website to the search strategy to the automation that runs quietly in the background.",
+  body: "I work with small businesses to design the systems that let them compete above their size: from the website to the search strategy to the automation that runs quietly in the background.",
 } as const;
 
 export const workCategories: WorkCategory[] = [
@@ -23,7 +23,7 @@ export const workCategories: WorkCategory[] = [
     icon: "LayoutGrid",
     title: "Web Apps & Websites",
     summary:
-      "Fast, modern, conversion-focused sites and AI-assisted web apps built for real business outcomes — not just good looks.",
+      "Fast, modern, conversion-focused sites and AI-assisted web apps built for real business outcomes, not just good looks.",
     outcomes: [
       "Bespoke business websites",
       "AI-assisted web applications",
@@ -35,7 +35,7 @@ export const workCategories: WorkCategory[] = [
     icon: "Search",
     title: "SEO Systems",
     summary:
-      "Repeatable search systems that compound — technical foundations, content structure, and local visibility that keep working after launch.",
+      "Repeatable search systems that compound: technical foundations, content structure, and local visibility that keep working after launch.",
     outcomes: [
       "Technical SEO foundations",
       "Local & organic visibility",
@@ -59,7 +59,7 @@ export const workCategories: WorkCategory[] = [
     icon: "Globe",
     title: "Business Systems",
     summary:
-      "The bigger picture — assembling marketing, sales, and operations into one coherent system a small business can actually run.",
+      "The bigger picture: assembling marketing, sales, and operations into one coherent system a small business can actually run.",
     outcomes: [
       "Marketing & sales systems",
       "Operational structure",

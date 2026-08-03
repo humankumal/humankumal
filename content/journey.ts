@@ -21,7 +21,7 @@ export const origin = {
   heading: "It started in Nepal.",
   body: [
     "I grew up in Nepal, where I learned early that nothing worth having comes without patience and discipline. That mindset shaped everything that followed.",
-    "Long before I built websites or systems, I was learning how to study hard, take responsibility, and finish what I started. The work ethic I carry into every project today was formed here — not in a classroom, but in the habits of growing up in Nepal.",
+    "Long before I built websites or systems, I was learning how to study hard, take responsibility, and finish what I started. The work ethic I carry into every project today was formed here, not in a classroom, but in the habits of growing up in Nepal.",
   ],
 } as const;
 
@@ -46,7 +46,7 @@ export const education: EducationEntry[] = [
     institution: "Institution to be confirmed",
     institutionKnown: false,
     impact:
-      "Strategy on top of fundamentals. The MBA sharpened how I think about growth, risk, and the long game — the lens I now bring to every client's business.",
+      "Strategy on top of fundamentals. The MBA sharpened how I think about growth, risk, and the long game. It is the lens I now bring to every client's business.",
   },
   {
     id: "msc",
@@ -67,7 +67,7 @@ export const theMove = {
   toLabel: "United Kingdom",
   heading: "Then I moved to the UK.",
   body: [
-    "Leaving home was never just booking a flight. It was a bet on myself — that the discipline I built in Nepal would carry, and compound, somewhere new.",
+    "Leaving home was never just booking a flight. It was a bet on myself: that the discipline I built in Nepal would carry, and compound, somewhere new.",
     "The UK tested everything I thought I knew about business against a different market, a faster pace, and a higher bar. It is the decision my whole story turns on, and the reason UKDIGIHUB exists today.",
   ],
 } as const;
@@ -76,7 +76,7 @@ export const mscChapter = {
   eyebrow: "MSc · United Kingdom",
   heading: "Where strategy met the digital craft.",
   body: [
-    "The MSc in Digital Marketing was less a course and more a translation layer — taking the finance-trained way I see businesses and expressing it through SEO, content, analytics, and automation.",
+    "The MSc in Digital Marketing was less a course and more a translation layer, taking the finance-trained way I see businesses and expressing it through SEO, content, analytics, and automation.",
     "It is where the academic and the practical finally met, and where the idea behind UKDIGIHUB started to take real shape.",
   ],
   themes: [
