@@ -49,6 +49,17 @@ export const projects: Project[] = [
     status: "live",
   },
   {
+    id: "laundryo",
+    title: "LaundryOS",
+    description:
+      "A demo platform for laundry and dry-cleaning businesses. This portfolio build explores how booking, collection, and delivery tracking could work end-to-end in a clean interface.",
+    disciplines: ["Business System", "Automation"],
+    tech: ["Business System", "Automation", "Web App"],
+    image: "",
+    href: "https://laundry-os-red.vercel.app",
+    status: "live",
+  },
+  {
     id: "fishos",
     title: "FishOS",
     description:
@@ -57,6 +68,17 @@ export const projects: Project[] = [
     tech: ["Business System", "Dashboard", "Web App"],
     image: "",
     href: "https://fish-os-five.vercel.app",
+    status: "live",
+  },
+  {
+    id: "luxefloor",
+    title: "LuxeFloor Carpets",
+    description:
+      "A portfolio website and local SEO build for a flooring and carpets specialist, designed to show how a well-structured site and search system can drive local enquiries.",
+    disciplines: ["Web App", "SEO"],
+    tech: ["Next.js", "SEO", "Conversion"],
+    image: "",
+    href: "https://luxefloor-carpet.vercel.app",
     status: "live",
   },
   {
@@ -69,17 +91,6 @@ export const projects: Project[] = [
     image: "",
     href: "#",
     status: "demo",
-  },
-  {
-    id: "laundryo",
-    title: "LaundryOS",
-    description:
-      "A demo platform for laundry and dry-cleaning businesses. This portfolio build explores how booking, collection, and delivery tracking could work end-to-end in a clean interface.",
-    disciplines: ["Business System", "Automation"],
-    tech: ["Business System", "Automation", "Web App"],
-    image: "",
-    href: "https://laundry-os-red.vercel.app",
-    status: "live",
   },
   {
     id: "dentalos",
@@ -113,17 +124,6 @@ export const projects: Project[] = [
     image: "",
     href: "#",
     status: "demo",
-  },
-  {
-    id: "luxefloor",
-    title: "LuxeFloor Carpets",
-    description:
-      "A portfolio website and local SEO build for a flooring and carpets specialist, designed to show how a well-structured site and search system can drive local enquiries.",
-    disciplines: ["Web App", "SEO"],
-    tech: ["Next.js", "SEO", "Conversion"],
-    image: "",
-    href: "https://luxefloor-carpet.vercel.app",
-    status: "live",
   },
   {
     id: "lanternfall",
