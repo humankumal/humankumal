@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { origin } from "@/content/journey";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -26,28 +27,28 @@ export function OriginNepal() {
           </div>
         </div>
 
-        {/* Atmospheric placeholder — Himalayan silhouette / origin imagery */}
+        {/* Founder portrait — Nepal, with the Himalayas and a stupa behind */}
         <Reveal delay={120}>
           <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-[color-mix(in_srgb,var(--color-muted)_15%,transparent)] bg-elevated">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,color-mix(in_srgb,var(--color-amber)_22%,transparent),transparent_60%)]" />
-            {/* Simple layered mountain silhouette */}
-            <svg
-              viewBox="0 0 400 500"
-              className="absolute inset-x-0 bottom-0 h-2/3 w-full"
+            <Image
+              src="/images/human-kumal-portrait.png"
+              alt="Human Kumal in Nepal, with the Himalayas, a Buddhist stupa, and prayer flags in the background"
+              fill
+              sizes="(min-width: 1024px) 40vw, 100vw"
+              className="object-cover"
+            />
+            {/* Bottom gradient for depth and caption legibility */}
+            <div
               aria-hidden
-              preserveAspectRatio="xMidYMax meet"
-            >
-              <polygon
-                points="0,500 120,220 200,320 300,160 400,300 400,500"
-                fill="color-mix(in srgb, var(--color-teal) 14%, transparent)"
-              />
-              <polygon
-                points="0,500 90,300 180,380 280,240 400,360 400,500"
-                fill="color-mix(in srgb, var(--color-base) 80%, transparent)"
-              />
-            </svg>
-            <span className="absolute bottom-5 left-5 text-xs uppercase tracking-[0.25em] text-muted">
-              Nepal · origin imagery to be added
+              className="absolute inset-0 bg-gradient-to-t from-base/70 via-base/5 to-transparent"
+            />
+            {/* Soft amber glow accent, echoing the golden-hour light */}
+            <div
+              aria-hidden
+              className="pointer-events-none absolute -bottom-12 -right-12 h-44 w-44 rounded-full bg-amber/10 blur-3xl"
+            />
+            <span className="absolute bottom-5 left-5 text-xs font-medium uppercase tracking-[0.25em] text-ink/80">
+              Nepal
             </span>
           </div>
         </Reveal>
