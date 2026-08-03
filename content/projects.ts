@@ -56,8 +56,8 @@ export const projects: Project[] = [
     disciplines: ["Business System", "Web App"],
     tech: ["Business System", "Dashboard", "Web App"],
     image: "",
-    href: "#",
-    status: "demo",
+    href: "https://fish-os-five.vercel.app",
+    status: "live",
   },
   {
     id: "pharmacyos",
@@ -78,8 +78,8 @@ export const projects: Project[] = [
     disciplines: ["Business System", "Automation"],
     tech: ["Business System", "Automation", "Web App"],
     image: "",
-    href: "#",
-    status: "demo",
+    href: "https://laundry-os-red.vercel.app",
+    status: "live",
   },
   {
     id: "dentalos",
@@ -122,8 +122,8 @@ export const projects: Project[] = [
     disciplines: ["Web App", "SEO"],
     tech: ["Next.js", "SEO", "Conversion"],
     image: "",
-    href: "#",
-    status: "demo",
+    href: "https://luxefloor-carpet.vercel.app",
+    status: "live",
   },
   {
     id: "lanternfall",
